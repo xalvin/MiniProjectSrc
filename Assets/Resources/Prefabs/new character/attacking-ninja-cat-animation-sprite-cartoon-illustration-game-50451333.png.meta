@@ -1,15 +1,12 @@
 fileFormatVersion: 2
-guid: 9732f1c9af4929b4ca92dd73d37e0544
+guid: 9c7cbe213ec0cd940b9a9f829a589168
 TextureImporter:
   fileIDToRecycleName:
-    21300000: tie_tu_10_0
-    21300002: tie_tu_10_1
-    21300004: tie_tu_10_2
-    21300006: tie_tu_10_3
-    21300008: tie_tu_10_4
-    21300010: tie_tu_10_5
-    21300012: tie_tu_10_6
-    21300014: tie_tu_10_7
+    21300000: attacking-ninja-cat-animation-sprite-cartoon-illustration-game-50451333_0
+    21300002: attacking-ninja-cat-animation-sprite-cartoon-illustration-game-50451333_1
+    21300004: attacking-ninja-cat-animation-sprite-cartoon-illustration-game-50451333_2
+    21300006: attacking-ninja-cat-animation-sprite-cartoon-illustration-game-50451333_3
+    21300008: attacking-ninja-cat-animation-sprite-cartoon-illustration-game-50451333_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -51,85 +48,55 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: tie_tu_10_0
+    - name: attacking-ninja-cat-animation-sprite-cartoon-illustration-game-50451333_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 285
-        width: 201
-        height: 207
+        x: 40
+        y: 477
+        width: 401
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tie_tu_10_1
+    - name: attacking-ninja-cat-animation-sprite-cartoon-illustration-game-50451333_1
       rect:
         serializedVersion: 2
-        x: 268
-        y: 271
-        width: 236
-        height: 225
+        x: 493
+        y: 499
+        width: 323
+        height: 371
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tie_tu_10_2
+    - name: attacking-ninja-cat-animation-sprite-cartoon-illustration-game-50451333_2
       rect:
         serializedVersion: 2
-        x: 543
-        y: 267
-        width: 219
-        height: 190
+        x: 839
+        y: 433
+        width: 422
+        height: 441
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tie_tu_10_3
+    - name: attacking-ninja-cat-animation-sprite-cartoon-illustration-game-50451333_3
       rect:
         serializedVersion: 2
-        x: 790
-        y: 253
-        width: 234
-        height: 255
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tie_tu_10_4
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 7
-        width: 206
-        height: 224
+        x: 43
+        y: 43
+        width: 338
+        height: 370
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tie_tu_10_5
+    - name: attacking-ninja-cat-animation-sprite-cartoon-illustration-game-50451333_4
       rect:
         serializedVersion: 2
-        x: 282
-        y: 2
-        width: 204
-        height: 249
+        x: 453
+        y: 51
+        width: 495
+        height: 382
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tie_tu_10_6
-      rect:
-        serializedVersion: 2
-        x: 509
-        y: 3
-        width: 248
-        height: 231
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tie_tu_10_7
-      rect:
-        serializedVersion: 2
-        x: 782
-        y: 20
-        width: 219
-        height: 228
-      alignment: 0
-      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

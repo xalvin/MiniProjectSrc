@@ -1,0 +1,91 @@
+fileFormatVersion: 2
+guid: ac07a4b2887980349bd0bf369ac54339
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: running-cowboy-sprite-illustration-animation-game-41139067_0
+    21300002: running-cowboy-sprite-illustration-animation-game-41139067_1
+    21300004: running-cowboy-sprite-illustration-animation-game-41139067_2
+    21300006: running-cowboy-sprite-illustration-animation-game-41139067_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: running-cowboy-sprite-illustration-animation-game-41139067_0
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 660
+        width: 344
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: running-cowboy-sprite-illustration-animation-game-41139067_1
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 649
+        width: 299
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: running-cowboy-sprite-illustration-animation-game-41139067_2
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 46
+        width: 302
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: running-cowboy-sprite-illustration-animation-game-41139067_3
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 20
+        width: 398
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

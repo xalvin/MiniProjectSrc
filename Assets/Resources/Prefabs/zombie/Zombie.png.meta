@@ -1,7 +1,59 @@
 fileFormatVersion: 2
 guid: 8c05539b8dd24514aa12ee62333d3e52
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Zombie_0
+    21300002: Zombie_1
+    21300004: Zombie_2
+    21300006: Zombie_3
+    21300008: Zombie_4
+    21300010: Zombie_5
+    21300012: Zombie_6
+    21300014: Zombie_7
+    21300016: Zombie_8
+    21300018: Zombie_9
+    21300020: Zombie_10
+    21300022: Zombie_11
+    21300024: Zombie_12
+    21300026: Zombie_13
+    21300028: Zombie_14
+    21300030: Zombie_15
+    21300032: Zombie_16
+    21300034: Zombie_17
+    21300036: Zombie_18
+    21300038: Zombie_19
+    21300040: Zombie_20
+    21300042: Zombie_21
+    21300044: Zombie_22
+    21300046: Zombie_23
+    21300048: Zombie_24
+    21300050: Zombie_25
+    21300052: Zombie_26
+    21300054: Zombie_27
+    21300056: Zombie_28
+    21300058: Zombie_29
+    21300060: Zombie_30
+    21300062: Zombie_31
+    21300064: Zombie_32
+    21300066: Zombie_33
+    21300068: Zombie_34
+    21300070: Zombie_35
+    21300072: Zombie_36
+    21300074: Zombie_37
+    21300076: Zombie_38
+    21300078: Zombie_39
+    21300080: Zombie_40
+    21300082: Zombie_41
+    21300084: Zombie_42
+    21300086: Zombie_43
+    21300088: Zombie_44
+    21300090: Zombie_45
+    21300092: Zombie_46
+    21300094: Zombie_47
+    21300096: Zombie_48
+    21300098: Zombie_49
+    21300100: Zombie_50
+    21300102: Zombie_51
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,13 +77,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +94,526 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Zombie_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 337
+        width: 69
+        height: 83
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 332
+        width: 61
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_2
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 335
+        width: 92
+        height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_3
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 339
+        width: 71
+        height: 81
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_4
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 335
+        width: 67
+        height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_5
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 337
+        width: 77
+        height: 83
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_6
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 332
+        width: 71
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_7
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 337
+        width: 68
+        height: 83
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_8
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 334
+        width: 65
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_9
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 335
+        width: 72
+        height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_10
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 335
+        width: 72
+        height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_11
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 332
+        width: 62
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_12
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 329
+        width: 63
+        height: 91
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_13
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 246
+        width: 66
+        height: 83
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_14
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 248
+        width: 67
+        height: 79
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_15
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 246
+        width: 76
+        height: 79
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_16
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 241
+        width: 74
+        height: 89
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_17
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 248
+        width: 79
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_18
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 251
+        width: 75
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_19
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 244
+        width: 74
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_20
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 241
+        width: 65
+        height: 91
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_21
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 246
+        width: 75
+        height: 83
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_22
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 237
+        width: 76
+        height: 93
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_23
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 246
+        width: 74
+        height: 89
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 155
+        width: 67
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_25
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 152
+        width: 83
+        height: 87
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_26
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 157
+        width: 80
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_27
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 153
+        width: 74
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_28
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 158
+        width: 81
+        height: 83
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_29
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 153
+        width: 77
+        height: 83
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_30
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 153
+        width: 81
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_31
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 150
+        width: 88
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_32
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 148
+        width: 64
+        height: 91
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_33
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 148
+        width: 69
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_34
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 150
+        width: 70
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_35
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 153
+        width: 88
+        height: 79
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_36
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 146
+        width: 83
+        height: 90
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_37
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 143
+        width: 55
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 59
+        width: 57
+        height: 87
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_39
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 59
+        width: 82
+        height: 89
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_40
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 62
+        width: 71
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_41
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 71
+        width: 76
+        height: 79
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_42
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 66
+        width: 86
+        height: 87
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_43
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 59
+        width: 63
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_44
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 64
+        width: 74
+        height: 82
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_45
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 67
+        width: 55
+        height: 79
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_46
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 66
+        width: 75
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_47
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 62
+        width: 86
+        height: 79
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_48
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 67
+        width: 62
+        height: 79
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_49
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 67
+        width: 70
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_50
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 62
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie_51
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 61
+        width: 74
+        height: 68
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
