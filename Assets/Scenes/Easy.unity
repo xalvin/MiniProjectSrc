@@ -847,6 +847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100000
   isEnemy: 0
+  isBoss: 0
 --- !u!114 &1374192581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1038,7 +1039,7 @@ GameObject:
   - 114: {fileID: 1604362725}
   m_Layer: 0
   m_Name: ScoreMenu
-  m_TagString: Untagged
+  m_TagString: ScoreMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1076,6 +1077,8 @@ MonoBehaviour:
   bossScore: 50
   enemyScore: 1
   timeScore: 1
+  DurationMin: 0
+  DurationSec: 45
 --- !u!1 &1661939885
 GameObject:
   m_ObjectHideFlags: 0

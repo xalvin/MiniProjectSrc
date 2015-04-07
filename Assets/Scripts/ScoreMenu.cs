@@ -12,6 +12,11 @@ public class ScoreMenu : MonoBehaviour {
 	public int bossScore = 50;
 	public int enemyScore = 1;
 	public int timeScore = 1;
+	public int DurationMin = 1;
+	public int DurationSec = 30;
+	int min = 0;
+	int sec = 0;
+	int msec = 0;
 	// Use this for initialization
 	void Start () {
 		scoreText = GameObject.Find ("Score").GetComponent<TextMesh>();
@@ -19,33 +24,69 @@ public class ScoreMenu : MonoBehaviour {
 		wavecountText = GameObject.Find ("WaveCount").GetComponent<TextMesh>();
 		score = int.Parse(scoreText.text);
 		wave = int.Parse (wavecountText.text);
+		timerText.text = DurationMin.ToString()+":"+DurationSec.ToString()+":00";
+		min = DurationMin;
+		sec = DurationSec;
 	}
 
-	public void addScoreByKill(GameObject enemyObj){
-		string enemyName = enemyObj.name.Substring(0,enemyObj.name.Length-7);
-		if(enemyName == "Boss"){
-//		if(enemyObj=="Boss"){
-			score+=bossScore;
-			scoreText.text = score.ToString();
-		}else{
-			score+=enemyScore;
-			scoreText.text= score.ToString();
-		}
+	public void addScoreByKillBoss(){
+		score+=bossScore;
+		scoreText.text = score.ToString ();
 	}
 
+	public void addScoreByKillEnemy(){
+		score+=enemyScore;
+		scoreText.text= score.ToString();	
+	}
 	public void addScoreByTime(){
 		score+=timeScore;
 		scoreText.text = score.ToString();
 	}
 
-	public void updateTiming(){
+	void updateTiming(){
 
 	}
 
-
-
+	void goToNextWave(){
+		wave += 1;
+		wavecountText.text = wave.ToString ();
+	}
+	string tempTimeString;
 	// Update is called once per frame
 	void Update () {
+		tempTimeString="";
+		msec -= 1;
+		if(min<=0&&sec<=0&&msec<=0){
+			goToNextWave();
+			min = DurationMin;
+			sec = DurationSec;
+			msec=0;
+		}
+		if (msec<=0) {
+			msec = 60;
+			sec-=1;
+			addScoreByTime();
+		}
+		if (sec < 0) {
+			sec = 59;
+			min-=1;
+		}
+		if (min < 0) {
+			min=0;
+		}
+		if(min<10){
+			tempTimeString+="0";
+		}
+		tempTimeString +=( min.ToString ()+":");
+		if(sec<10){
+			tempTimeString+="0";
+		}
+		tempTimeString +=( sec.ToString ()+":");
+		if(msec<10){
+			tempTimeString+="0";
+		}
+		tempTimeString += msec.ToString ();
+		timerText.text = tempTimeString;
 
 	}
 }

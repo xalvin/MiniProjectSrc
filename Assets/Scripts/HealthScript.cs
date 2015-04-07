@@ -5,6 +5,12 @@
 /// </summary>
 public class HealthScript : MonoBehaviour
 {
+	ScoreMenu scoreMenu;
+	void Start(){
+		scoreMenu = GameObject.FindGameObjectWithTag ("ScoreMenu").GetComponent<ScoreMenu>();
+	}
+
+
   /// <summary>
   /// Total hitpoints
   /// </summary>
@@ -14,7 +20,7 @@ public class HealthScript : MonoBehaviour
   /// Enemy or player?
   /// </summary>
   public bool isEnemy = true;
-
+  public bool isBoss = false;
   /// <summary>
   /// Inflicts damage and check if the object should be destroyed
   /// </summary>
@@ -31,6 +37,15 @@ public class HealthScript : MonoBehaviour
 
       // Dead!
       Destroy(gameObject);
+
+	//Add score
+		if(isEnemy){
+			if(isBoss){
+				scoreMenu.addScoreByKillBoss();
+			}else{
+				scoreMenu.addScoreByKillEnemy();
+			}
+		}
     }
   }
 
