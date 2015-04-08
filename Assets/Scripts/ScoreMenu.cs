@@ -17,11 +17,13 @@ public class ScoreMenu : MonoBehaviour {
 	int min = 0;
 	int sec = 0;
 	int msec = 0;
+	GameObject[] spawnPoints;
 	// Use this for initialization
 	void Start () {
 		scoreText = GameObject.Find ("Score").GetComponent<TextMesh>();
 		timerText = GameObject.Find("Timer").GetComponent<TextMesh>();
 		wavecountText = GameObject.Find ("WaveCount").GetComponent<TextMesh>();
+		spawnPoints = GameObject.FindGameObjectsWithTag ("SpawnPoint");
 		score = int.Parse(scoreText.text);
 		wave = int.Parse (wavecountText.text);
 		timerText.text = DurationMin.ToString()+":"+DurationSec.ToString()+":00";
@@ -50,6 +52,11 @@ public class ScoreMenu : MonoBehaviour {
 	void goToNextWave(){
 		wave += 1;
 		wavecountText.text = wave.ToString ();
+		foreach (GameObject sp in spawnPoints) {
+			if(sp.activeSelf){
+				sp.GetComponent<SpawnPointScript>().increaseSpawnTimeByWaveUp();
+			}
+		}
 	}
 	string tempTimeString;
 	// Update is called once per frame
