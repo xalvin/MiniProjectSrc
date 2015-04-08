@@ -115,7 +115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnDurationSec: 1
   waveMultipler: .0500000007
-  minSpawnTimeSec: .5
+  minSpawnTimeSec: .200000003
+  enemyList: []
 --- !u!1 &72019671
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,9 +510,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89de08837f9f95f4f8977862121043c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnDurationSec: 1
+  spawnDurationSec: 3.5
   waveMultipler: .0500000007
   minSpawnTimeSec: .5
+  enemyList: []
 --- !u!4 &543396473
 Transform:
   m_ObjectHideFlags: 0
@@ -677,7 +679,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnDurationSec: 1
   waveMultipler: .0500000007
-  minSpawnTimeSec: .5
+  minSpawnTimeSec: .200000003
+  enemyList: []
 --- !u!4 &877654947
 Transform:
   m_ObjectHideFlags: 0
@@ -1165,9 +1168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89de08837f9f95f4f8977862121043c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnDurationSec: 1
+  spawnDurationSec: 2.5
   waveMultipler: .0500000007
   minSpawnTimeSec: .5
+  enemyList: []
 --- !u!4 &1461713189
 Transform:
   m_ObjectHideFlags: 0
@@ -1231,10 +1235,10 @@ MonoBehaviour:
   bossScore: 50
   enemyScore: 1
   timeScore: 1
-  DurationMin: 1
-  DurationSec: 30
+  DurationMin: 0
+  DurationSec: 45
   killMultiper: .5
-  killMultiperDecrease: .200000003
+  killMultiperDecrease: .400000006
   decreaseAfterSec: 1
 --- !u!1 &1661939885
 GameObject:

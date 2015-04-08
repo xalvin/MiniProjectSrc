@@ -10,6 +10,8 @@ public class SpawnPointScript : MonoBehaviour {
 	GameObject monsterPrefab;
 	GameObject bossPrefab;
 	Random random;
+	public GameObject[] enemyList;
+
 
 	// Use this for initialization
 	void Start () {

@@ -45,8 +45,7 @@ public class ScoreMenu : MonoBehaviour {
 	public void addScoreByKillBoss(){
 		score+=bossScore;
 		scoreText.text = score.ToString ();
-		comboMulitpler += killMultiper*2;
-		comboMultiperText.text = "x"+comboMulitpler.ToString();
+		increaseComboMultiper (killMultiper*10);
 	}
 
 	public void addScoreByKillEnemy(){
@@ -59,16 +58,25 @@ public class ScoreMenu : MonoBehaviour {
 			score+=enemyScore;
 		}
 		scoreText.text= score.ToString();
-		comboMulitpler += killMultiper;
-		comboMultiperText.text = "x"+comboMulitpler.ToString();
+		increaseComboMultiper (killMultiper);
 	}
 	public void addScoreByTime(){
 		score+=timeScore;
 		scoreText.text = score.ToString();
 	}
 
-	void updateTiming(){
+	void increaseComboMultiper(float km){
+		comboMulitpler += km;
+		comboMultiperText.text = "x"+comboMulitpler.ToString();
+	}
 
+	void decreaseComboMultiper(float kmd){
+		comboMulitpler -= kmd;
+		if(comboMulitpler<0){
+			comboMulitpler=0;
+		}
+		comboMulitpler = ((int)(comboMulitpler * 10) / 10);
+		comboMultiperText.text = "x"+comboMulitpler.ToString();
 	}
 
 	void goToNextWave(){
@@ -85,11 +93,7 @@ public class ScoreMenu : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (count % killMultiperCount == 0 && comboMulitpler>0) {
-			comboMulitpler -= killMultiperDecrease;
-			if(comboMulitpler<0){
-				comboMulitpler=0;
-			}
-			comboMultiperText.text = "x"+comboMulitpler.ToString();
+			decreaseComboMultiper(killMultiperDecrease);
 		}
 		count++;
 		tempTimeString="";
