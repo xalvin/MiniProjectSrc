@@ -17,16 +17,86 @@ public class PlayerScript : MonoBehaviour
 	float inputX=0;
 	float playerscale =0;
 	float facedir =1;
-	void Start(){
-		playerscale = transform.localScale.x;
 
+	void OnEnable() {
+		EasyJoystick.On_JoystickMove += OnJoystickMove;  
+		EasyJoystick.On_JoystickMoveEnd += OnJoystickMoveEnd;  
+		EasyButton.On_ButtonDown += OnPress;
 	}
+
+	void OnDisable(){
+		EasyJoystick.On_JoystickMove -= OnJoystickMove;	
+		EasyJoystick.On_JoystickMoveEnd -= OnJoystickMoveEnd;
+		EasyButton.On_ButtonDown += OnPress;
+	}
+
+
+	void OnPress(string buttonName) {
+		if (buttonName.Equals("Jump")) {
+			if(jump == 0){
+				rigidbody2D.AddForce(new Vector2(0,jumpheight), ForceMode2D.Impulse);
+				jump =1;
+			}
+		}
+		if (buttonName.Equals("Attack")) {
+			WeaponScript weapon = GetComponent<WeaponScript>();
+			if (weapon != null && weapon.CanAttack)
+			{
+				weapon.Attack(false);
+				SoundEffectsHelper.Instance.MakePlayerShotSound();
+			}
+		}
+		if (buttonName.Equals ("Skill")) {
+		}
+	}
+	
+	void OnJoystickMoveEnd(MovingJoystick move)  
+	{  
+		//when stop
+		if (move.joystickName == "MoveJS")  
+		{  
+			Debug.Log("stop");
+		}  
+	}  
+	
+	
+	//moving 
+	void OnJoystickMove(MovingJoystick move)  
+	{  
+		if (move.joystickName != "MoveJS")  
+		{  
+			return;  
+		}  
+		
+		float joyPositionX = move.joystickAxis.x;  
+		float joyPositionY = move.joystickAxis.y;  
+		
+		
+		if (joyPositionY != 0 || joyPositionX != 0)  
+		{  
+			inputX = joyPositionX; 
+			if (joyPositionX <= 0) {
+
+			} else {
+				//transform.Translate(Vector3.right * Time.deltaTime * 5);
+			}
+		}  
+	}  
+
+
+  void Start(){
+	 playerscale = transform.localScale.x;
+
+  }
+
   void Update()
   {
+	/*
     // 2 - Retrieve axis information
     inputX = Input.GetAxis("Horizontal");
     float inputY = Input.GetAxis("Vertical");
 		Debug.Log (inputX);
+	*/
 		if (jump == 1) {
 			jumptimer +=1;
 			if(jumptimer >=50){
@@ -34,6 +104,7 @@ public class PlayerScript : MonoBehaviour
 				jumptimer = 0;
 			}
 		}
+		/*
 		if(Input.GetKeyDown("up")){
 			if(jump == 0){
 				rigidbody2D.AddForce(new Vector2(0,jumpheight), ForceMode2D.Impulse);
@@ -51,6 +122,7 @@ public class PlayerScript : MonoBehaviour
 			facedir = 1;
 		}
 		transform.localScale = new Vector3(playerscale*facedir,transform.localScale.y);
+   */
 
 /*
     // 3 - Movement per direction
@@ -58,6 +130,8 @@ public class PlayerScript : MonoBehaviour
       speed * inputX,
       0);
 */
+
+		/*
     // 5 - Shooting
     bool shoot = Input.GetButtonDown("Fire1");
     shoot |= Input.GetButtonDown("Fire2"); // For Mac users, ctrl + arrow is a bad idea
@@ -71,7 +145,7 @@ public class PlayerScript : MonoBehaviour
         SoundEffectsHelper.Instance.MakePlayerShotSound();
       }
     }
-
+	*/
     // 6 - Make sure we are not outside the camera bounds
     var dist = (transform.position - Camera.main.transform.position).z;
     var leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).x;
