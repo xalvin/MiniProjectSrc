@@ -113,6 +113,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89de08837f9f95f4f8977862121043c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
+  spawnDurationSec: 1
+  waveMultipler: .0500000007
+  minSpawnTimeSec: .5
+  enemyList:
+  - {fileID: 100000, guid: 48a324092af677249af49e82fdcfd65f, type: 2}
+  bossList:
+  - {fileID: 100008, guid: a52499a02c202a64a8d0bc85aa244877, type: 2}
+  additionalHP: 1
 --- !u!1 &72019671
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +682,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89de08837f9f95f4f8977862121043c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 0
+  spawnDurationSec: 1
+  waveMultipler: .0500000007
+  minSpawnTimeSec: .5
+  enemyList:
+  - {fileID: 100000, guid: 48a324092af677249af49e82fdcfd65f, type: 2}
+  bossList:
+  - {fileID: 100008, guid: a52499a02c202a64a8d0bc85aa244877, type: 2}
+  additionalHP: 1
 --- !u!4 &543396473
 Transform:
   m_ObjectHideFlags: 0
@@ -974,6 +992,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89de08837f9f95f4f8977862121043c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
+  spawnDurationSec: 1
+  waveMultipler: .0500000007
+  minSpawnTimeSec: .5
+  enemyList:
+  - {fileID: 100000, guid: 48a324092af677249af49e82fdcfd65f, type: 2}
+  bossList:
+  - {fileID: 100008, guid: a52499a02c202a64a8d0bc85aa244877, type: 2}
+  additionalHP: 1
 --- !u!4 &877654947
 Transform:
   m_ObjectHideFlags: 0
@@ -1461,6 +1488,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89de08837f9f95f4f8977862121043c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 0
+  spawnDurationSec: 1
+  waveMultipler: .0500000007
+  minSpawnTimeSec: .5
+  enemyList:
+  - {fileID: 100000, guid: 48a324092af677249af49e82fdcfd65f, type: 2}
+  bossList:
+  - {fileID: 100008, guid: a52499a02c202a64a8d0bc85aa244877, type: 2}
+  additionalHP: 1
 --- !u!4 &1461713189
 Transform:
   m_ObjectHideFlags: 0
@@ -1524,11 +1560,16 @@ MonoBehaviour:
   bossScore: 50
   enemyScore: 1
   timeScore: 1
-  DurationMin: 1
-  DurationSec: 30
+  DurationMin: 0
+  DurationSec: 2
   killMultiper: .5
   killMultiperDecrease: .200000003
   decreaseAfterSec: 1
+  hpOfEnemyToBeAdd: 1
+  numOfWaveToAddEnemyHP: 5
+  numOfWaveToSpawnBoss: 10
+  numOfWaveToActiveSpawnPoint: 5
+  numOfWaveToAddSpawnTime: 2
 --- !u!1 &1661939885
 GameObject:
   m_ObjectHideFlags: 0

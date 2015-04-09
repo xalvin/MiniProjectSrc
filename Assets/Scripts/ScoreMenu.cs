@@ -20,6 +20,11 @@ public class ScoreMenu : MonoBehaviour {
 	public float killMultiperDecrease = 0.2f;
 	public float decreaseAfterSec = 1;
 	int killMultiperCount =0;
+	public int hpOfEnemyToBeAdd = 1;
+	public int numOfWaveToAddEnemyHP = 5;
+	public int numOfWaveToSpawnBoss = 10;
+	public int numOfWaveToActiveSpawnPoint =5; 
+	public int numOfWaveToAddSpawnTime = 2;
 	int min = 0;
 	int sec = 0;
 	int msec = 0;
@@ -82,9 +87,28 @@ public class ScoreMenu : MonoBehaviour {
 	void goToNextWave(){
 		wave += 1;
 		wavecountText.text = wave.ToString ();
+		SpawnPointScript spScript;
 		foreach (GameObject sp in spawnPoints) {
-			if(sp.activeSelf){
-				sp.GetComponent<SpawnPointScript>().increaseSpawnTimeByWaveUp();
+			spScript = sp.GetComponent<SpawnPointScript>();
+			if(spScript.isActive){
+				if(wave%numOfWaveToAddSpawnTime==0){
+					spScript.increaseSpawnTimeByWaveUp();
+				}
+				if(wave%numOfWaveToAddEnemyHP ==0){
+					spScript.increaseHP(hpOfEnemyToBeAdd);
+				}
+				if(wave%numOfWaveToSpawnBoss ==0){
+					spScript.spawnBoss();
+				}
+			}
+		}
+		if(wave % numOfWaveToActiveSpawnPoint ==0){
+			foreach (GameObject sp in spawnPoints) {
+				spScript = sp.GetComponent<SpawnPointScript>();
+				if(spScript.isActive==false){
+					spScript.isActive=true;
+					break;
+				}
 			}
 		}
 	}
@@ -92,7 +116,11 @@ public class ScoreMenu : MonoBehaviour {
 	int count =0;
 	// Update is called once per frame
 	void Update () {
-		if (count % killMultiperCount == 0 && comboMulitpler>0) {
+		int killcount = Mathf.CeilToInt (killMultiperCount - comboMulitpler / 2 + 5);
+		if (killcount <= 0) {
+			killcount = 1;
+		}
+		if (count % killcount == 0 && comboMulitpler>0) {
 			decreaseComboMultiper(killMultiperDecrease);
 		}
 		count++;

@@ -2,23 +2,23 @@
 using System.Collections;
 
 public class SpawnPointScript : MonoBehaviour {
+	public bool isActive = true;
 	public float spawnDurationSec = 1.0f;
 	int spawnDuration = 0;
 	public float waveMultipler = 0.05f;
 	public float minSpawnTimeSec = 0.5f;
 	int minSpawnTime = 0;
-	GameObject monsterPrefab;
-	GameObject bossPrefab;
+
 	Random random;
 	public GameObject[] enemyList;
-
+	public GameObject[] bossList;
+	public int additionalHP =1;
 
 	// Use this for initialization
 	void Start () {
 		spawnDuration =(int) (spawnDurationSec * 60);
 		minSpawnTime = (int)(minSpawnTimeSec * 60);
-		monsterPrefab = (GameObject)Resources.Load ("Prefabs/Poulpi");
-		bossPrefab = (GameObject)Resources.Load ("Prefabs/Boss");
+
 	}
 	GameObject monster;
 	int timecount=0;
@@ -31,13 +31,13 @@ public class SpawnPointScript : MonoBehaviour {
 		}
 	}
 
+	public void increaseHP(int morehp){
+		additionalHP += morehp;
+	}
 
-	// Update is called once per frame
-	void Update () {
-		timecount++;
-//		Debug.Log ("SpawnDuration : "+spawnDuration.ToString());
-		if(timecount % spawnDuration == 0){
-			GameObject newMon = (GameObject)GameObject.Instantiate (monsterPrefab);
+	void spawnEnemy(){
+		if(isActive){
+			GameObject newMon = (GameObject)GameObject.Instantiate (enemyList[Random.Range(0,enemyList.Length)]);
 			newMon.transform.position = this.transform.position;
 			MoveScript move = newMon.GetComponent<MoveScript>();
 			int dir = 1;
@@ -45,7 +45,29 @@ public class SpawnPointScript : MonoBehaviour {
 				dir =-1;
 			}
 			move.direction = new Vector2(dir,0);
+			HealthScript health = newMon.GetComponent<HealthScript>();
+			health.hp += additionalHP;
+		}
+	}
 
+	public void spawnBoss(){
+		if(isActive){
+			GameObject newMon = (GameObject)GameObject.Instantiate (bossList[Random.Range(0,bossList.Length)]);
+			newMon.transform.position = this.transform.position;
+			HealthScript health = newMon.GetComponent<HealthScript>();
+			health.hp += additionalHP;
+		}
+	}
+
+	// Update is called once per frame
+	void Update () {
+		if(isActive){
+			timecount++;
+	//		Debug.Log ("SpawnDuration : "+spawnDuration.ToString());
+			if(timecount % spawnDuration == 0){
+				spawnEnemy ();
+
+			}
 		}
 	}
 
