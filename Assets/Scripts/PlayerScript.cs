@@ -55,7 +55,7 @@ public class PlayerScript : MonoBehaviour
 		//when stop
 		if (move.joystickName == "MoveJS")  
 		{  
-			Debug.Log("stop");
+			inputX = 0;
 		}  
 	}  
 	
@@ -80,7 +80,7 @@ public class PlayerScript : MonoBehaviour
 			} else {
 				//transform.Translate(Vector3.right * Time.deltaTime * 5);
 			}
-		}  
+		}
 	}  
 
 
