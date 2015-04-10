@@ -9,6 +9,7 @@ public class ScoreMenu : MonoBehaviour {
 	TextMesh comboMultiperText;
 	int score =0;
 	int wave = 0;
+	bool gameActive = true;
 	public string level = "Easy";
 	float levelMulitper = 1;
 	public int bossScore = 50;
@@ -113,51 +114,63 @@ public class ScoreMenu : MonoBehaviour {
 			}
 		}
 	}
+
+	public void SetGameOver(){
+		gameActive = false;
+
+	}
+
+
+	public int getScore(){
+		return score;
+	}
+
 	string tempTimeString;
 	int count =0;
 	// Update is called once per frame
 	void Update () {
-		int killcount = Mathf.CeilToInt (killMultiperCount - comboMulitpler / 2 + 5);
-		if (killcount <= 0) {
-			killcount = 1;
+		if(gameActive){
+			int killcount = Mathf.CeilToInt (killMultiperCount - comboMulitpler / 2 + 5);
+			if (killcount <= 0) {
+				killcount = 1;
+			}
+			if (count % killcount == 0 && comboMulitpler>0) {
+				decreaseComboMultiper(killMultiperDecrease);
+			}
+			count++;
+			tempTimeString="";
+			msec -= 1;
+			if(min<=0&&sec<=0&&msec<=0){
+				goToNextWave();
+				min = DurationMin;
+				sec = DurationSec;
+				msec=0;
+			}
+			if (msec<=0) {
+				msec = 60;
+				sec-=1;
+				addScoreByTime();
+			}
+			if (sec < 0) {
+				sec = 59;
+				min-=1;
+			}
+			if (min < 0) {
+				min=0;
+			}
+			if(min<10){
+				tempTimeString+="0";
+			}
+			tempTimeString +=( min.ToString ()+":");
+			if(sec<10){
+				tempTimeString+="0";
+			}
+			tempTimeString +=( sec.ToString ()+":");
+			if(msec<10){
+				tempTimeString+="0";
+			}
+			tempTimeString += msec.ToString ();
+			timerText.text = tempTimeString;
 		}
-		if (count % killcount == 0 && comboMulitpler>0) {
-			decreaseComboMultiper(killMultiperDecrease);
-		}
-		count++;
-		tempTimeString="";
-		msec -= 1;
-		if(min<=0&&sec<=0&&msec<=0){
-			goToNextWave();
-			min = DurationMin;
-			sec = DurationSec;
-			msec=0;
-		}
-		if (msec<=0) {
-			msec = 60;
-			sec-=1;
-			addScoreByTime();
-		}
-		if (sec < 0) {
-			sec = 59;
-			min-=1;
-		}
-		if (min < 0) {
-			min=0;
-		}
-		if(min<10){
-			tempTimeString+="0";
-		}
-		tempTimeString +=( min.ToString ()+":");
-		if(sec<10){
-			tempTimeString+="0";
-		}
-		tempTimeString +=( sec.ToString ()+":");
-		if(msec<10){
-			tempTimeString+="0";
-		}
-		tempTimeString += msec.ToString ();
-		timerText.text = tempTimeString;
-
 	}
 }

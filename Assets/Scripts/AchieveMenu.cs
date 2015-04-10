@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AchieveMenu : MonoBehaviour {
 
-	private int score = 10000000;
+	private int score = 0;
 	private int menuState; //0 for weapon, 1 for skill, 2 for ability 
 	private int weapon;
 	private int skill;
@@ -11,7 +11,8 @@ public class AchieveMenu : MonoBehaviour {
 	private GUISkin skin;
 	// Use this for initialization
 	void Start () {
-		//Load score from DB;
+		//Load score from prefs;
+		score = PlayerPrefs.GetInt ("Score",0);
 		skin = Resources.Load("GUISkin") as GUISkin;
 	}
 	

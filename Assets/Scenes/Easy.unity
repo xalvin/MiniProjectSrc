@@ -271,7 +271,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 1efc62f840d0b1b43983c1be59125249, type: 2}
       propertyPath: hp
-      value: 100000
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 1efc62f840d0b1b43983c1be59125249, type: 2}
       propertyPath: jumpheight
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enable: 1
   isActivated: 1
-  showDebugArea: 0
+  showDebugArea: 1
   isUseGuiLayout: 1
   buttonState: 3
   anchor: 8
@@ -502,9 +502,9 @@ MonoBehaviour:
   isSwipeOut: 0
   interaction: 0
   useBroadcast: 0
-  receiverGameObject: {fileID: 1374192578}
+  receiverGameObject: {fileID: 0}
   messageMode: 0
-  useSpecificalMethod: 1
+  useSpecificalMethod: 0
   downMethodName: Skill
   pressMethodName: 
   upMethodName: 
@@ -866,9 +866,9 @@ MonoBehaviour:
   isSwipeOut: 0
   interaction: 0
   useBroadcast: 0
-  receiverGameObject: {fileID: 1374192578}
+  receiverGameObject: {fileID: 0}
   messageMode: 0
-  useSpecificalMethod: 1
+  useSpecificalMethod: 0
   downMethodName: Jump
   pressMethodName: 
   upMethodName: 
@@ -1317,7 +1317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6085c891add2ad44ea52438ae450eb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100000
+  hp: 2
   isEnemy: 0
   isBoss: 0
 --- !u!114 &1374192581
@@ -1819,9 +1819,9 @@ MonoBehaviour:
   isSwipeOut: 0
   interaction: 0
   useBroadcast: 0
-  receiverGameObject: {fileID: 1374192578}
+  receiverGameObject: {fileID: 0}
   messageMode: 0
-  useSpecificalMethod: 1
+  useSpecificalMethod: 0
   downMethodName: Attack
   pressMethodName: 
   upMethodName: 

@@ -6,10 +6,14 @@
 public class GameOverScript : MonoBehaviour
 {
   private GUISkin skin;
-
+	ScoreMenu sm;
   void Start()
   {
     skin = Resources.Load("GUISkin") as GUISkin;
+	sm = transform.GetComponent<ScoreMenu>();
+		int aScore = PlayerPrefs.GetInt ("Score",0);
+		PlayerPrefs.SetInt("Score",aScore+sm.getScore ());
+		sm.SetGameOver ();
   }
 
   void OnGUI()

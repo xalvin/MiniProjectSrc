@@ -23,7 +23,7 @@ public class MenuScript : MonoBehaviour
     }
     if (GUI.Button(new Rect(Screen.width/3,Screen.height/8*3,Screen.width/3,Screen.height/8),"Achievements"))
     {
-      	Application.LoadLevel(""); 
+			Application.LoadLevel("Achievement"); 
     }
     if (GUI.Button(new Rect(Screen.width/3,Screen.height/8*5,Screen.width/3,Screen.height/8),"Record"))
     {
