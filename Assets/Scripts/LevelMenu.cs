@@ -16,19 +16,19 @@ public class LevelMenu : MonoBehaviour {
 		GUI.skin = skin;
 		if (GUI.Button(new Rect(Screen.width/3,Screen.height/10*1,Screen.width/3,Screen.height/10),"Easy"))
 		{
-			Application.LoadLevel("EasyStage"); 
+			Application.LoadLevel("Easy"); 
 		}
 		if (GUI.Button(new Rect(Screen.width/3,Screen.height/10*3,Screen.width/3,Screen.height/10),"Normal"))
 		{
-			Application.LoadLevel("NormalStage"); 
+			Application.LoadLevel("Normal"); 
 		}
 		if (GUI.Button(new Rect(Screen.width/3,Screen.height/10*5,Screen.width/3,Screen.height/10),"Hard"))
 		{
-			Application.LoadLevel("HardStage"); 
+			Application.LoadLevel("Hard"); 
 		}
 		if (GUI.Button(new Rect(Screen.width/3,Screen.height/10*7,Screen.width/3,Screen.height/10),"What the ????"))
 		{
-			Application.LoadLevel("HellStage");
+			Application.LoadLevel("Hell");
 		}
 		if (GUI.Button(new Rect(Screen.width/3,Screen.height/10*9,Screen.width/3,Screen.height/10),"Back"))
 		{
