@@ -66,13 +66,46 @@ public class WeaponScript : MonoBehaviour
 
       // Make the weapon shot always towards it
       MoveScript move = shotTransform.gameObject.GetComponent<MoveScript>();
+	  float X = transform.GetComponent<PlayerScript>().inputX;
+	  float Y = transform.GetComponent<PlayerScript>().inputY;
       if (move != null)
       {
-		if(this.transform.localScale.x < 0){
-        move.direction = new Vector2(-1,0); // towards in 2D space is the right of the sprite
-		}else{
-		move.direction = new Vector2(1,0);
+		if (X <0) {
+			if (Y > 0) {
+					move.direction = new Vector2(-1,1);	
+			} else if (Y < 0) {
+					move.direction = new Vector2(-1,-1);
+			} else {
+					move.direction = new Vector2(-1,0);		
+			}
+		} else if (X > 0) {
+			if (Y > 0) {
+					move.direction = new Vector2(1,1);	
+			} else if (Y <0) {
+					move.direction = new Vector2(1,-1);
+			} else {
+					move.direction = new Vector2(1,0);		
+			}
+		} else {
+			if (Y > 0) {
+					move.direction = new Vector2(0,1);	
+			} else if (Y < 0) {
+					move.direction = new Vector2(0,-1);
+			} else {
+				if(this.transform.localScale.x < 0){
+		        move.direction = new Vector2(-1,0); // towards in 2D space is the right of the sprite
+				}else{
+				move.direction = new Vector2(1,0);
+				}
+			}
 		}
+		/*
+		if(this.transform.localScale.x < 0){
+        move.direction = new Vector2(X,Y); // towards in 2D space is the right of the sprite
+		}else{
+		move.direction = new Vector2(X,Y);
+		}
+		*/
 	  }
     }
   }

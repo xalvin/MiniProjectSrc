@@ -14,7 +14,8 @@ public class PlayerScript : MonoBehaviour
 	public float jumpheight = 50;
   // 1 - Store the movement
   private Vector2 movement;
-	float inputX=0;
+	public float inputX=0;
+	public float inputY=0;
 	float playerscale =0;
 	float facedir =1;
 
@@ -56,6 +57,7 @@ public class PlayerScript : MonoBehaviour
 		if (move.joystickName == "MoveJS")  
 		{  
 			inputX = 0;
+			inputY = 0;
 		}  
 	}  
 	
@@ -70,11 +72,12 @@ public class PlayerScript : MonoBehaviour
 		
 		float joyPositionX = move.joystickAxis.x;  
 		float joyPositionY = move.joystickAxis.y;  
-		
-		
+		print (joyPositionX);
+		print (joyPositionY);
 		if (joyPositionY != 0 || joyPositionX != 0)  
 		{  
 			inputX = joyPositionX; 
+			inputY = joyPositionY;
 			if (inputX < 0) {
 				//face left
 				facedir = -1;
