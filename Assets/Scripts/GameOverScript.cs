@@ -26,7 +26,8 @@ public class GameOverScript : MonoBehaviour
       ))
     {
       // Reload the level
-      Application.LoadLevel("Stage1");
+		string stage = PlayerPrefs.GetString("Stage");
+			Application.LoadLevel(stage);
     }
 
     if (GUI.Button(
@@ -36,7 +37,7 @@ public class GameOverScript : MonoBehaviour
       ))
     {
       // Reload the level
-      Application.LoadLevel("Menu");
+			Application.LoadLevel("LevelSelection");
     }
   }
 }

@@ -9,7 +9,7 @@ public class ScoreMenu : MonoBehaviour {
 	TextMesh comboMultiperText;
 	int score =0;
 	int wave = 0;
-	public string level = "easy";
+	public string level = "Easy";
 	float levelMulitper = 1;
 	public int bossScore = 50;
 	public int enemyScore = 1;
@@ -33,6 +33,7 @@ public class ScoreMenu : MonoBehaviour {
 	int skillpoint = 0;
 	// Use this for initialization
 	void Start () {
+		PlayerPrefs.SetString ("Stage",level);
 		scoreText = GameObject.Find ("Score").GetComponent<TextMesh>();
 		timerText = GameObject.Find("Timer").GetComponent<TextMesh>();
 		wavecountText = GameObject.Find ("WaveCount").GetComponent<TextMesh>();
