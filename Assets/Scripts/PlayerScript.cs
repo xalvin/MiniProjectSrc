@@ -75,11 +75,14 @@ public class PlayerScript : MonoBehaviour
 		if (joyPositionY != 0 || joyPositionX != 0)  
 		{  
 			inputX = joyPositionX; 
-			if (joyPositionX <= 0) {
-
-			} else {
-				//transform.Translate(Vector3.right * Time.deltaTime * 5);
+			if (inputX < 0) {
+				//face left
+				facedir = -1;
+			}else if(inputX>0){
+				//face right
+				facedir = 1;
 			}
+			transform.localScale = new Vector3(playerscale*facedir,transform.localScale.y);
 		}
 	}  
 
