@@ -40,7 +40,8 @@ public class PlayerScript : MonoBehaviour
 			if(jump == 0){
 				rigidbody2D.AddForce(new Vector2(0,jumpheight), ForceMode2D.Impulse);
 				jump =1;
-				animator.SetTrigger("Jump");
+				//animator.SetTrigger("Jump");
+				animator.Play("Jump");
 			}
 		}
 		if (buttonName.Equals("Attack")) {
@@ -49,23 +50,25 @@ public class PlayerScript : MonoBehaviour
 			{
 				weapon.Attack(false);
 				SoundEffectsHelper.Instance.MakePlayerShotSound();
-				animator.SetTrigger("Attack");
+				//animator.SetTrigger("Attack");
+				animator.Play("Attack");
 			}
 		}
 		if (buttonName.Equals ("Skill")) {
-			animator.SetTrigger("Attack");
+			animator.Play("Attack");
 		}
 	}
 	
 	void OnJoystickMoveEnd(MovingJoystick move)  
 	{  
+		Debug.Log ("in end");
 		//when stop
 		if (move.joystickName == "MoveJS")  
 		{  
 			inputX = 0;
 			inputY = 0;
 		}  
-		animator.SetTrigger("Idle");
+		animator.Play("Idle");
 		
 	}  
 	
@@ -94,7 +97,8 @@ public class PlayerScript : MonoBehaviour
 				facedir = 1;
 			}
 			transform.localScale = new Vector3(playerscale*facedir,transform.localScale.y);
-			animator.SetTrigger("Move");
+			//animator.SetTrigger("Move");
+			animator.Play("Move");
 		} 
 	}  
 
