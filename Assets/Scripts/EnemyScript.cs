@@ -8,6 +8,9 @@ public class EnemyScript : MonoBehaviour
   private bool hasSpawn;
   private MoveScript moveScript;
   private WeaponScript[] weapons;
+	HealthScript healthScript;
+	BossFloatOrFollowPlayer bossScript;
+
 
   void Awake()
   {
@@ -21,12 +24,13 @@ public class EnemyScript : MonoBehaviour
   void Start()
   {
     hasSpawn = false;
-
+		healthScript = gameObject.GetComponent<HealthScript>();
+		bossScript = gameObject.GetComponent<BossFloatOrFollowPlayer>();
     // Disable everything
     // -- collider
     collider2D.enabled = false;
     // -- Moving
-    moveScript.enabled = false;
+//    moveScript.enabled = false;
     // -- Shooting
     foreach (WeaponScript weapon in weapons)
     {
@@ -58,7 +62,7 @@ public class EnemyScript : MonoBehaviour
       }
 */
       // Out of camera?
-      if (renderer.IsVisibleFrom(Camera.main) == false)
+			if (renderer.IsVisibleFrom(Camera.main) == false && bossScript == null)
       {
         Destroy(gameObject);
       }
@@ -73,7 +77,7 @@ public class EnemyScript : MonoBehaviour
     // -- Collider
     collider2D.enabled = true;
     // -- Moving
-    moveScript.enabled = true;
+ //   moveScript.enabled = true;
     // -- Shooting
     foreach (WeaponScript weapon in weapons)
     {

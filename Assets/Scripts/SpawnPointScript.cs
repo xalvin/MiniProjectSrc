@@ -52,10 +52,19 @@ public class SpawnPointScript : MonoBehaviour {
 
 	public void spawnBoss(){
 		if(isActive){
-			GameObject newMon = (GameObject)GameObject.Instantiate (bossList[Random.Range(0,bossList.Length)]);
-			newMon.transform.position = this.transform.position;
-			HealthScript health = newMon.GetComponent<HealthScript>();
-			health.hp += additionalHP;
+			if(bossList.Length >0){
+				GameObject newMon = (GameObject)GameObject.Instantiate (bossList[Random.Range(0,bossList.Length)]);
+				newMon.transform.position = this.transform.position;
+				MoveScript move = newMon.GetComponent<MoveScript>();
+				if(move != null){
+					int dir = 1;
+					if(Random.Range(0,2)==0){
+						dir =-1;
+						}
+				}
+				HealthScript health = newMon.GetComponent<HealthScript>();
+				health.hp += additionalHP;
+			}
 		}
 	}
 
