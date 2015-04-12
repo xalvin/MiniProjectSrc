@@ -19,6 +19,9 @@ public class PlayerScript : MonoBehaviour
 	float playerscale =0;
 	float facedir =1;
 
+
+	private Animator animator;
+
 	void OnEnable() {
 		EasyJoystick.On_JoystickMove += OnJoystickMove;  
 		EasyJoystick.On_JoystickMoveEnd += OnJoystickMoveEnd;  
@@ -37,6 +40,7 @@ public class PlayerScript : MonoBehaviour
 			if(jump == 0){
 				rigidbody2D.AddForce(new Vector2(0,jumpheight), ForceMode2D.Impulse);
 				jump =1;
+				animator.SetTrigger("Jump");
 			}
 		}
 		if (buttonName.Equals("Attack")) {
@@ -45,9 +49,11 @@ public class PlayerScript : MonoBehaviour
 			{
 				weapon.Attack(false);
 				SoundEffectsHelper.Instance.MakePlayerShotSound();
+				animator.SetTrigger("Attack");
 			}
 		}
 		if (buttonName.Equals ("Skill")) {
+			animator.SetTrigger("Attack");
 		}
 	}
 	
@@ -59,6 +65,8 @@ public class PlayerScript : MonoBehaviour
 			inputX = 0;
 			inputY = 0;
 		}  
+		animator.SetTrigger("Idle");
+		
 	}  
 	
 	
@@ -72,8 +80,8 @@ public class PlayerScript : MonoBehaviour
 		
 		float joyPositionX = move.joystickAxis.x;  
 		float joyPositionY = move.joystickAxis.y;  
-		print (joyPositionX);
-		print (joyPositionY);
+		//print (joyPositionX);
+		//print (joyPositionY);
 		if (joyPositionY != 0 || joyPositionX != 0)  
 		{  
 			inputX = joyPositionX; 
@@ -86,13 +94,14 @@ public class PlayerScript : MonoBehaviour
 				facedir = 1;
 			}
 			transform.localScale = new Vector3(playerscale*facedir,transform.localScale.y);
-		}
+			animator.SetTrigger("Move");
+		} 
 	}  
 
 
   void Start(){
 	 playerscale = transform.localScale.x;
-
+	 animator = GetComponent<Animator>();
   }
 
   void Update()
