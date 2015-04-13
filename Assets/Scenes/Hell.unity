@@ -640,6 +640,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 1efc62f840d0b1b43983c1be59125249, type: 2}
+      propertyPath: hp
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1efc62f840d0b1b43983c1be59125249, type: 2}
   m_RootGameObject: {fileID: 1374192578}
@@ -1431,6 +1435,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 11404286, guid: a9f4b01d2ba07a545a3d3faed0672254, type: 2}
+      propertyPath: timeScore
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404286, guid: a9f4b01d2ba07a545a3d3faed0672254, type: 2}
+      propertyPath: enemyScore
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404286, guid: a9f4b01d2ba07a545a3d3faed0672254, type: 2}
+      propertyPath: DurationSec
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9f4b01d2ba07a545a3d3faed0672254, type: 2}
   m_RootGameObject: {fileID: 1604362723}
@@ -1606,7 +1622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6085c891add2ad44ea52438ae450eb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100000
+  hp: 1
   isEnemy: 0
   isBoss: 0
 --- !u!114 &1374192581
@@ -1982,10 +1998,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: Hell
   bossScore: 50
-  enemyScore: 1
-  timeScore: 1
+  enemyScore: 5
+  timeScore: 4
   DurationMin: 0
-  DurationSec: 2
+  DurationSec: 30
   killMultiper: .5
   killMultiperDecrease: .200000003
   decreaseAfterSec: 1
