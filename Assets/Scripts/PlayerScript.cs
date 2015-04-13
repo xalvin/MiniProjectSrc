@@ -33,7 +33,7 @@ public class PlayerScript : MonoBehaviour
 	void OnDisable(){
 		EasyJoystick.On_JoystickMove -= OnJoystickMove;	
 		EasyJoystick.On_JoystickMoveEnd -= OnJoystickMoveEnd;
-		EasyButton.On_ButtonDown += OnPress;
+		EasyButton.On_ButtonDown -= OnPress;
 	}
 
 
