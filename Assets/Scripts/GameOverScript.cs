@@ -13,6 +13,12 @@ public class GameOverScript : MonoBehaviour
 	sm = transform.GetComponent<ScoreMenu>();
 		int aScore = PlayerPrefs.GetInt ("Score",0);
 		PlayerPrefs.SetInt("Score",aScore+sm.getScore ());
+		string stage = PlayerPrefs.GetString("Stage");
+		// easyWave or hellWave
+		int highwave = PlayerPrefs.GetInt (stage.ToLower()+"Wave",0);
+		if (sm.getWave () > highwave) {
+			PlayerPrefs.SetInt (stage.ToLower () + "Wave", sm.getWave ());
+		}
 		PlayerPrefs.Save ();
 		sm.SetGameOver ();
   }

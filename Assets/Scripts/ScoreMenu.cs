@@ -151,6 +151,10 @@ public class ScoreMenu : MonoBehaviour {
 		return skillpoint;
 	}
 
+	public int getWave(){
+		return wave;
+	}
+
 	public void decreaseSkillPoint(int d){
 		skillpoint -= d;
 		skillpointText.text = skillpoint.ToString();
