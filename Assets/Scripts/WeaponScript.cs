@@ -110,6 +110,16 @@ public class WeaponScript : MonoBehaviour
     }
   }
 
+	public void skillAttack(){
+		// Create a new shot 
+		var shotTransform = Instantiate(shotPrefab) as Transform;
+		
+		// Assign position
+		shotTransform.position = transform.position;
+
+	}
+
+
   /// <summary>
   /// Is the wepaon ready to create a new projectile?
   /// </summary>

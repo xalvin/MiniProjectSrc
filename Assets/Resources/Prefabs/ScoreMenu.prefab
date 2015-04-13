@@ -607,7 +607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15bf67123f0b07b48b33ba8a47ab11fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: easy
+  level: Hell
   bossScore: 50
   enemyScore: 1
   timeScore: 1
@@ -621,6 +621,12 @@ MonoBehaviour:
   numOfWaveToSpawnBoss: 10
   numOfWaveToActiveSpawnPoint: 5
   numOfWaveToAddSpawnTime: 2
+  weaponList:
+  - {fileID: 100000, guid: 7cbb5835641cb0a459084370ebd64725, type: 2}
+  - {fileID: 100000, guid: 77360a372bb9fcf45b2f181c14cf0643, type: 2}
+  - {fileID: 100000, guid: 8af6a7e8db7ac904e87ded2f4139d147, type: 2}
+  - {fileID: 100000, guid: b1d5ba48fc3f3e541b371786d395d4b2, type: 2}
+  skillList: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

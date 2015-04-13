@@ -13,6 +13,7 @@ public class GameOverScript : MonoBehaviour
 	sm = transform.GetComponent<ScoreMenu>();
 		int aScore = PlayerPrefs.GetInt ("Score",0);
 		PlayerPrefs.SetInt("Score",aScore+sm.getScore ());
+		PlayerPrefs.Save ();
 		sm.SetGameOver ();
   }
 

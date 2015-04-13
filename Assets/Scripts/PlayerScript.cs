@@ -19,8 +19,10 @@ public class PlayerScript : MonoBehaviour
 	float playerscale =0;
 	float facedir =1;
 
-
 	private Animator animator;
+
+	GameObject[] skillList;
+	ScoreMenu sm;
 
 	void OnEnable() {
 		EasyJoystick.On_JoystickMove += OnJoystickMove;  
@@ -54,8 +56,13 @@ public class PlayerScript : MonoBehaviour
 				animator.Play("Attack");
 			}
 		}
-		if (buttonName.Equals ("Skill")) {
+		if (buttonName.Equals ("Skill")&& sm.GetSkillPoint() >=50 ) {
+			sm.decreaseSkillPoint(50);
 			animator.Play("Attack");
+			foreach(GameObject sk in skillList){
+				sk.GetComponent<SkillShot>().startSkill();
+			}
+
 		}
 	}
 	
@@ -106,6 +113,8 @@ public class PlayerScript : MonoBehaviour
   void Start(){
 	 playerscale = transform.localScale.x;
 	 animator = GetComponent<Animator>();
+		skillList = GameObject.FindGameObjectsWithTag ("SkillList");
+		sm =  GameObject.FindGameObjectWithTag ("ScoreMenu").GetComponent<ScoreMenu>();
   }
 
   void Update()

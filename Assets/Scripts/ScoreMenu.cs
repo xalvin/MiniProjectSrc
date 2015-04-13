@@ -32,9 +32,27 @@ public class ScoreMenu : MonoBehaviour {
 	GameObject[] spawnPoints;
 	float comboMulitpler=0.0f;
 	int skillpoint = 0;
+
+	float runSpeed;
+	float damage;
+	float shotSpeed;
+	int weapon;
+	int skill;
+	public GameObject[] weaponList;
+	public GameObject[] skillList;
+	GameObject player;
 	// Use this for initialization
 	void Start () {
 		PlayerPrefs.SetString ("Stage",level);
+		PlayerPrefs.Save ();
+		player = GameObject.FindGameObjectWithTag ("Player");
+		runSpeed = PlayerPrefs.GetFloat ("runSpeed",1.0f);
+		damage = PlayerPrefs.GetFloat ("damage",1.0f);
+		shotSpeed = PlayerPrefs.GetFloat ("shotSpeed",1.0f);
+		weapon = PlayerPrefs.GetInt ("weapon", 0);
+		skill = PlayerPrefs.GetInt ("skill",0);
+		setWeaponAndAdditionalDamage (weaponList[weapon],damage,shotSpeed);
+		player.GetComponent<PlayerScript> ().speed *= runSpeed;
 		scoreText = GameObject.Find ("Score").GetComponent<TextMesh>();
 		timerText = GameObject.Find("Timer").GetComponent<TextMesh>();
 		wavecountText = GameObject.Find ("WaveCount").GetComponent<TextMesh>();
@@ -48,6 +66,16 @@ public class ScoreMenu : MonoBehaviour {
 		min = DurationMin;
 		sec = DurationSec;
 	}
+
+
+
+	void setWeaponAndAdditionalDamage(GameObject weaponGO,float dm,float sp){
+		
+		weaponGO.GetComponent<ShotScript> ().damage = Mathf.CeilToInt(weaponGO.GetComponent<ShotScript> ().damage * dm);
+		player.GetComponent<WeaponScript>().shotPrefab = weaponGO.transform;
+		player.GetComponent<WeaponScript> ().shootingRate /= sp;
+	}
+
 
 	public void addScoreByKillBoss(){
 		score+=bossScore;
@@ -119,7 +147,14 @@ public class ScoreMenu : MonoBehaviour {
 		gameActive = false;
 
 	}
+	public int GetSkillPoint(){
+		return skillpoint;
+	}
 
+	public void decreaseSkillPoint(int d){
+		skillpoint -= d;
+		skillpointText.text = skillpoint.ToString();
+	}
 
 	public int getScore(){
 		return score;
