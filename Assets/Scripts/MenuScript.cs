@@ -27,7 +27,7 @@ public class MenuScript : MonoBehaviour
     }
     if (GUI.Button(new Rect(Screen.width/3,Screen.height/8*5,Screen.width/3,Screen.height/8),"Record"))
     {
-      	Application.LoadLevel(""); 
+      	Application.LoadLevel("record"); 
     }
     if (GUI.Button(new Rect(Screen.width/3,Screen.height/8*7,Screen.width/3,Screen.height/8),"Exit"))
     {
